@@ -1,0 +1,339 @@
+/* FLEX Project Page - Series Section Styles */
+
+/* ========================================
+   FLEX Research Series Section
+   ======================================== */
+.series-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+    padding: 4rem 0;
+}
+
+.series-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.series-intro p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+/* Series Navigation Tabs */
+.series-tabs {
+    display: none; /* Hidden for now - will be shown when multiple works are added */
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.series-tab {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-weight: 600;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.series-tab:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.series-tab.active {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.tab-icon {
+    font-size: 1.25rem;
+}
+
+/* Series Grid */
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Series Work Card */
+.series-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.series-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+/* Card Header */
+.series-card-header {
+    position: relative;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.card-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.series-status {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-published {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+}
+
+.status-preprint {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+    color: #92400e;
+}
+
+.status-in-progress {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1e40af;
+}
+
+.status-planned {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    color: #4b5563;
+}
+
+.series-domain-icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.series-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+/* Card Body */
+.series-card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.series-card-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.series-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.meta-icon {
+    font-size: 1rem;
+}
+
+/* Card Preview Image */
+.series-card-preview {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.series-card-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.series-card:hover .series-card-preview img {
+    transform: scale(1.1);
+}
+
+.preview-placeholder {
+    font-size: 4rem;
+    opacity: 0.3;
+}
+
+/* Card Footer */
+.series-card-footer {
+    padding: 1rem 1.5rem;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.series-card-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-link {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.card-link:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.card-link.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Domain Color Accents */
+.series-card[data-domain="mathematics"] {
+    border-top: 4px solid var(--math-color);
+}
+
+.series-card[data-domain="chemistry"] {
+    border-top: 4px solid var(--chemistry-color);
+}
+
+.series-card[data-domain="biology"] {
+    border-top: 4px solid var(--biology-color);
+}
+
+.series-card[data-domain="methodology"] {
+    border-top: 4px solid var(--methodology-color);
+}
+
+.series-card[data-domain="applications"] {
+    border-top: 4px solid var(--applications-color);
+}
+
+.series-card[data-domain="theory"] {
+    border-top: 4px solid var(--theory-color);
+}
+
+/* Core FLEX Highlight */
+.series-card.core-work {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.2);
+}
+
+.series-card.core-work::before {
+    content: '⭐ Foundational Work';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #78350f;
+    padding: 0.4rem 1rem;
+    border-bottom-left-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Empty State */
+.series-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #9ca3af;
+}
+
+.series-empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.series-empty p {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 768px) {
+    .series-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .series-tabs {
+        flex-direction: column;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .series-tab {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .series-card-links {
+        flex-direction: column;
+    }
+}
