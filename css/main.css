@@ -196,6 +196,10 @@ section {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+section#news {
+    padding: var(--spacing-2xl) 0 0 0;
+}
+
 section.visible {
     opacity: 1;
     transform: translateY(0);
